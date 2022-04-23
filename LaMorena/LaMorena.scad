@@ -8,8 +8,8 @@ module holder(thickness=1, height=20, ir=10){
         cylinder(h=height, r=ir + thickness);
         translate([0, 0, thickness]) 
         cylinder(h=(height + 4), r=ir);
-        
     } 
+    
 }
 
 module cheapTorus(height=1, ir=1, thickness=1, bottom=false){
@@ -30,6 +30,8 @@ module cheapTorus(height=1, ir=1, thickness=1, bottom=false){
 
 module holder2(thickness=1, height=20, ir=25, pitch=46, starts=12){
     rir = ir * 1.002;
+    //translate([-2,0,0])
+    //color([1,0,0]) scale(0.2) linear_extrude(4) text("La Morena", font="EB Garamond Initials", size=4);
     union() {
         spiral_extrude(Radius=rir, EndRadius=rir, Pitch=pitch, 
                        Height=height - thickness, StepsPerRev=$fn,
