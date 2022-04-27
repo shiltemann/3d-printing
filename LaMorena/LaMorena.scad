@@ -28,24 +28,27 @@ module cheapTorus(height=1, ir=1, thickness=1, bottom=false){
 
 
 
-module holder2(thickness=1, height=20, ir=25, pitch=46, starts=12){
+module holder2(thickness=1, height=20, ir=25, pitch=46, starts=12, text=""){
     rir = ir * 1.002;
     //translate([-2,0,0])
-    //color([1,0,0]) scale(0.2) linear_extrude(4) text("La Morena", font="EB Garamond Initials", size=4);
     union() {
         spiral_extrude(Radius=rir, EndRadius=rir, Pitch=pitch, 
                        Height=height - thickness, StepsPerRev=$fn,
                        Starts=starts){
-            rotate([0,0,8])square([thickness * 0.98, thickness],center=false);
+            rotate([0,0,10])square([thickness * 0.98, 1.5 * thickness],center=false);
         }
         scale([-1, 1, 1])
         spiral_extrude(Radius=rir, EndRadius=rir, Pitch=pitch, 
                        Height=height - thickness, StepsPerRev=$fn,
                        Starts=starts){
-            rotate([0,0,8])square([thickness * 0.98, thickness],center=false);
+            rotate([0,0,10])square([thickness * 0.98, 1.5 * thickness],center=false);
         }
         
-        cheapTorus(ir=ir, thickness=thickness, height=thickness * 1.5, bottom=true);
+        difference() {
+            cheapTorus(ir=ir, thickness=thickness, height=thickness * 1.5, bottom=true);
+            translate([0, 0, 2.5 * thickness / 3]) scale(0.5) linear_extrude(0.5) text(text, font="Ubuntu Monot", size=1, valign=40, halign="center");
+
+        }
         // translate([0, 0, height - thickness]) cheapTorus(height=thickness,ir=ir, thickness=thickness);
     }
 }
@@ -65,7 +68,7 @@ beans_ir=3.75;
 sour_ir = 3.12;
 
 // Thickness
-thicc = 0.4;
+thicc = 0.5;
 
 // Outer Diameters
 lamor_od = lamorena_ir + lamorena_ir + thicc + thicc;
@@ -75,11 +78,11 @@ lamor_off = lamor_od / 2 - thicc / 4;
 height = 6 + thicc;
 
 
-translate([0, -lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height);
-translate([0, lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height);
+translate([0, -lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height, text="Helena");
+translate([0, lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height, text="Saskia");
 
-translate([lamor_off * 2, -lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height);
-translate([lamor_off * 2, lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height);
+translate([lamor_off * 2, -lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height, text="La Morena");
+translate([lamor_off * 2, lamor_off, 0]) holder2(ir=lamorena_ir, thickness=thicc, height=height, text="Galaxians");
 
 // Beans
 // translate([-lamor_off * 1.9, 0, 0]) holder(ir=beans_ir, thickness=thicc, height=height);
