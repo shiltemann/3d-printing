@@ -9,6 +9,7 @@ Model | Image | Description
 --- | --- | ---
 [LaMorena/](LaMorena/) | ![rendered image](./LaMorena/images/printed2.jpg) | A carrier for four LaMorena products.
 [catfeeder/](catfeeder/) | ![rendered image](./catfeeder/images/catfeeder.gif) | A splitter for a cat feeder to permit two cats to eat simultaneously
+[Ergodox EZ Holder](ErgodoxEZ/) | ![rendered image](./ErgodoxEz/ErgodoxEzHolder.png) | A container for my Ergodox EZ to help keep it together during travel.
 
 
 ## All prints
