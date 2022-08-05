@@ -17,7 +17,7 @@ module box(thickness=1, iw=1, id=1, ih=1) {
 thic = 0.6;
 h = 8.4;
 kb_length = 13.6;
-    kb_width = 3.5;
+kb_width = 3.5;
 
 i = 0.1;
 
