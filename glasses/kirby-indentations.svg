@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="1388.2288"
+   height="432.76968"
+   viewBox="0 0 1388.2288 432.7697"
+   sodipodi:docname="kirby-indentations.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.62651573"
+     inkscape:cx="423.77228"
+     inkscape:cy="88.585166"
+     inkscape:window-width="1912"
+     inkscape:window-height="502"
+     inkscape:window-x="4"
+     inkscape:window-y="44"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1736">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1586"
+       originx="3.0732724e-06"
+       originy="9.6023977e-06" />
+    <sodipodi:guide
+       position="647.83579,150.61124"
+       orientation="0,-1"
+       id="guide1668"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="769.33427,-213.66264"
+       orientation="0,-1"
+       id="guide1731"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8">
+    <g
+       id="g1736"
+       transform="matrix(1.2536947,0,0,1.2536947,-122.4551,-380.17917)">
+      <rect
+         style="fill:#ff0000;stroke-width:8.30351;stroke-linecap:round;stroke-linejoin:round"
+         id="rect1641"
+         width="40.912975"
+         height="40.912975"
+         x="113.64859"
+         y="332.77878"
+         ry="2.9444942"
+         transform="rotate(-0.18384384)" />
+      <rect
+         style="fill:#ff0000;stroke-width:8.30351;stroke-linecap:round;stroke-linejoin:round"
+         id="rect1641-3"
+         width="40.912975"
+         height="40.912975"
+         x="-1186.6675"
+         y="334.84158"
+         ry="2.9444942"
+         transform="matrix(-0.9999981,0.00194788,0.00194788,0.9999981,0,0)" />
+    </g>
+  </g>
+</svg>
