@@ -1,7 +1,6 @@
 $fn = 20;
 $fn2 = 140;
 use <spiral.scad>
-use <LEGO.scad>
 
 module cheapTorus(height=1, ir=1, thickness=1, bottom=false){
     union() {
@@ -40,12 +39,5 @@ module holder2(thickness=1, height=20, start_radius=25, end_radius=15, pitch=500
         translate([0, 0, height - 1]) cheapTorus(ir=end_radius, thickness=thickness * 3, height=2);
     }
 }
-
-
-
-// Inner Diameters
-lamorena_ir = 3;
-
-
 
 holder2(start_radius=110/2, end_radius=45/2, thickness=1, height=140, text="LEGO™", text_scale=12);
