@@ -4,7 +4,7 @@ PNGS := $(SCADS:.scad=.png)
 all: $(PNGS)
 
 %.png: %.scad
-	openscad $< -o $@
+	openscad $< --colorscheme Tomorrow -o $@
 
 stow:
 	stow libs -t ~/.local/share/OpenSCAD/
