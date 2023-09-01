@@ -12,6 +12,17 @@ Model | Image | Description
 [Ergodox EZ Holder](ErgodoxEZ/) | ![rendered image](./ErgodoxEz/ErgodoxEzHolder.png) | A container for my Ergodox EZ to help keep it together during travel.
 
 
+Model | Image
+--- | ---
+LaMorena | ![rendered images](LaMorena/LaMorena.png)
+blinds-thingetje | ![rendered images](blinds-thingetje/blinds-thingetje.png)
+catfeeder | ![rendered images](catfeeder/catfeeder.png)
+glasses | ![rendered images](glasses/kirby2-lego.png)
+glasses | ![rendered images](glasses/kirby2.png)
+lamp-thingetje | ![rendered images](lamp-thingetje/lamp-thingetje.png)
+shower | ![rendered images](shower/shower-hook.png)
+vase | ![rendered images](vase/vase.png)
+
 ## All prints
 
 Model | Image | Description
