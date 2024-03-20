@@ -1,4 +1,4 @@
-$fn = 20;
+$fn = 40;
 $fn2 = 140;
 use <spiral.scad>
 
@@ -28,7 +28,7 @@ module holder2(thickness=1, height=20, start_radius=25, end_radius=15, pitch=500
         spiral_extrude(Radius=start_radius, EndRadius=end_radius, Pitch=pitch, 
                        Height=height - thickness, StepsPerRev=$fn,
                        Starts=starts){
-            rotate([0,0,75]) square([thickness, 5 * thickness],center=false);
+            rotate([0,0,75]) square([thickness * 2, 5 * thickness],center=false);
         }
         
         translate([0,0,-0.5]) difference() {
@@ -40,4 +40,4 @@ module holder2(thickness=1, height=20, start_radius=25, end_radius=15, pitch=500
     }
 }
 
-holder2(start_radius=110/2, end_radius=45/2, thickness=1, height=140, text="LEGO™", text_scale=12);
+holder2(start_radius=110/2, end_radius=45/2, thickness=1, height=140, text="Love from Saskia & Helena", text_scale=12);
