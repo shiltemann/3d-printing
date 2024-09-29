@@ -1,9 +1,9 @@
-$fn = 32;
+$fn = 50;
 
 // Combination of the OP's pumpkin stem with the "faster" reply's pumpkin
 // https://www.reddit.com/r/openscad/comments/pxl0a6/pumpkin/
 // rib
-rib_diameter = 12; 
+rib_diameter = 14; 
 ribs = 13;
 
 // nut
@@ -11,14 +11,14 @@ height = 14;
 // stem
 torusRad=20;
 torusstartAng=120; 
-use <threadlib.scad>
+use <bootyhole.scad>
 
 difference(){
     scale([0.5, 0.5, 0.5]) union(){
         for (i=[0:ribs-1]) rib(i); 
     }
-    color("green") cylinder(h=height * 0.75, r=4);
-}    
+    bootyhole_void(height);
+}
 translate([0, 0, 14]) scale([0.5, 0.5, 0.5])  stem();
 bootyhole(height);
 
@@ -27,7 +27,7 @@ module rib(i) {
     rotate([0, 0, i*(360/ribs)]) 
     translate([15, 0, 24]) 
         scale([1, 1, 0.9]) {
-            sphere(rib_diameter + 4); // Fills in the center space
+            sphere(rib_diameter + 11); // Fills in the center space
             rotate([90, 0, 0]) { 
             rotate_extrude() { 
                 translate([20, 0, 0]) 
@@ -62,19 +62,5 @@ module stem() {
     translate([0,0,posTop]) union() {
     for(q=[0:20:359]) rotate([0,0,q])
     linear_extrude(height=torusRad,center=false,convexity=4,twist=rands(0,60,1)[0]-20,slices=20,scale=1.4) translate([0,0,0]) offset(r=1) circle(d=rands(2,torusRad/2,1)[0],$fn=3);
-    }
-}
-
-module bootyhole(height) {
-    difference(){ 
-        union(){
-            color("red") nut("M5", turns=height);    
-            difference(){
-                color("green") cylinder(h=height * 0.75, r=4);
-                translate([0, 0, -0.5]) cylinder(h=(height + 1) * 0.75, r=2.6);
-            }
-        }
-        // strip bottom
-        translate([-5, -5, -1]) cube([10, 10, 1]);
     }
 }

@@ -11,7 +11,8 @@ height = 14;
 // stem
 torusRad=20;
 torusstartAng=120; 
-use <threadlib.scad>
+use <bootyhole.scad>;
+
 flower();
 bootyhole(height);
 
@@ -32,20 +33,4 @@ module petal(i, length=4, width=5) {
             scale([0.2, 1, 1]) cylinder(length * 4, 2, width);
             translate([0, 0, length * 4]) scale([0.2, 1, 1]) sphere(width + (0.1 / 8 * length));
         }
-}
-module bootyhole(height) {
-    difference(){ 
-        union(){
-            // Nut
-            color("red") nut("M5", turns=height);    
-            // Add a tube around it to ensure sufficient support
-            difference(){
-                color("green") cylinder(h=height * 0.75, r=4);
-                translate([0, 0, -0.5]) cylinder(h=(height + 1) * 0.75, r=2.6);
-            }
-        }
-        // strip bottom and top
-        translate([-5, -5, -1]) cube([10, 10, 1]);
-        translate([-5, -5, height - 3.5]) cube([10, 10, 2]);
-    }
 }
