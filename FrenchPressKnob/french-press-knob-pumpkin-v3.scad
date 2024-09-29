@@ -1,4 +1,4 @@
-$fn = 50;
+$fn = 80;
 
 // Combination of the OP's pumpkin stem with the "faster" reply's pumpkin
 // https://www.reddit.com/r/openscad/comments/pxl0a6/pumpkin/
