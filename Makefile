@@ -1,7 +1,8 @@
 SCADS := $(wildcard */*.scad)
 PNGS := $(SCADS:.scad=.png)
+STLS := $(SCADS:.scad=.stl)
 
-all: $(PNGS)
+all: $(PNGS) $(STLS)
 
 %.png: %.scad
 	openscad $< --colorscheme Tomorrow -o $@
