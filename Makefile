@@ -6,6 +6,9 @@ all: $(PNGS)
 %.png: %.scad
 	openscad $< --colorscheme Tomorrow -o $@
 
+%.stl: %.scad
+	openscad $< -o $@
+
 stow:
 	stow libs -t ~/.local/share/OpenSCAD/
 .PHONY:stow
