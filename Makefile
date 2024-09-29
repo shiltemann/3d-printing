@@ -4,6 +4,12 @@ STLS := $(SCADS:.scad=.stl)
 
 all: $(PNGS) $(STLS)
 
+pngs: $(PNGS)
+.PHONY:pngs
+
+stls: $(STLS)
+.PHONY:stls
+
 %.png: %.scad
 	openscad $< --colorscheme Tomorrow -o $@
 
