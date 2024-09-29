@@ -1,4 +1,4 @@
-SCADS := $(wildcard */*.scad)
+SCADS := $(filter-out FrenchPressKnob/bootyhole.scad,$(wildcard */*.scad))
 PNGS := $(SCADS:.scad=.png)
 STLS := $(SCADS:.scad=.stl)
 
