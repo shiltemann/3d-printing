@@ -1,4 +1,4 @@
-wine_rack_depth = 330;
+wine_rack_depth = 360;
 wine_rack_width = 102;
 wine_rack_height = 102;
 
@@ -48,10 +48,6 @@ rendering_fix  = 1;
 
 }
 
-pla = 0.4;
-
-
-
 module split_winerackit(places = 4, wall=2){
     
     d = (wine_rack_depth - wall - wall - ((places - 1) * wall)) / places;
@@ -75,7 +71,8 @@ module split_winerackit(places = 4, wall=2){
     }
 }
 
-split_winerackit(places=5, wall=1);
+
+split_winerackit(places=4, wall=1);
 
 
 // boxes - inner thingies 
